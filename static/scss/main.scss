@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Huninn&display=swap');
+
+$primary_font: "Huninn", sans-serif;
+$white: #FFFFFF;
+$black: #161A2B;
+$accent_color: #4252FE;
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: $white;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, li{
+    list-style-type: none;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+.container-fluid{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* AUTHENTICATION PAGE RULES -->
+================================ */
+.authentication{
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    
+    .container-fluid{
+        min-height: 100vh;
+
+        .authentication-content{
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .authentication-demo{
+                position: relative;
+                padding: 70px 70px;
+                background-color: $accent_color;
+
+                .logo-img{
+                    position: relative;
+                    margin-bottom: 20px;
+                }
+
+                .section-heading{
+                    position: relative;
+                    display: block;
+                    font-family: $primary_font;
+                    font-size: 50px;
+                    font-weight: bolder;
+                    text-transform: capitalize;
+                    line-height: 1.5;
+                    color: $white;
+                }
+
+                .section-text{
+                    position: relative;
+                    display: block;
+                    font-family: $primary_font;
+                    font-size: 14px;
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    line-height: 1.7;
+                    color: $white;
+                    margin: 20px 0;
+                }
+
+                .feedback-card{
+                    position: relative;
+                    width: 100%;
+                    margin-top: 100px;
+
+                    .feedback-rating{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 5px;
+
+                        .rating-item{
+                            position: relative;
+                            display: inline-block;
+                            font-size: 16px;
+                            color: $white;
+                        }
+                    }
+
+                    .feedback-review{
+                        position: relative;
+                        display: block;
+                        font-family: $primary_font;
+                        font-size: 13px;
+                        font-weight: 300;
+                        font-style: italic;
+                        line-height: 1.8;
+                        color: $white;
+                        margin: 15px 0;
+                    }
+
+                    .row-group{
+                        position: relative;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+
+                        .client-img{
+                            position: relative;
+                            max-width: 80px;
+                            flex-basis: 80px;
+                            height: 80px;
+
+                            img{
+                                position: relative;
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 50%;
+                                -webkit-border-radius: 50%;
+                                -moz-border-radius: 50%;
+                                -ms-border-radius: 50%;
+                                -o-border-radius: 50%;
+}
+                        }
+
+                        .text-wrapper{
+                            position: relative;
+                            max-width: calc(100% - 80px);
+                            flex-basis: calc(100% - 80px);
+                            padding-left: 20px;
+
+                            .client-name{
+                                position: relative;
+                                display: block;
+                                font-family: $primary_font;
+                                font-size: 18px;
+                                font-weight: 700;
+                                text-transform: capitalize;
+                                color: $white;
+                            }
+
+                            .client-role{
+                                position: relative;
+                                display: block;
+                                font-family: $primary_font;
+                                font-size: 15px;
+                                font-weight: 400;
+                                text-transform: capitalize;
+                                color: $white;
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .authentication-form{
+                position: relative;
+                padding: 70px 70px;
+                width: 100%;
+                display: grid;
+                place-items: center;
+                background-color: $white;
+
+                .inner{
+                    position: relative;
+                    width: 100%;
+
+                    .form-heading{
+                        position: relative;
+                        display: block;
+                        font-family: $primary_font;
+                        font-size: 32px;
+                        font-weight: 800;
+                        text-transform: capitalize;
+                        color: $black;
+                        margin-bottom: 30px;
+
+                        span{
+                            text-transform: uppercase;
+                            font-weight: bolder;
+                        }
+                    }
+
+                    form{
+                        position: relative;
+                        width: 100%;
+
+                        .input-box{
+                            position: relative;
+                            width: 100%;
+                            margin-bottom: 20px;
+
+                            .authentication-input-label{
+                                position: relative;
+                                display: block;
+                                font-family: $primary_font;
+                                font-size: 14px;
+                                font-weight: 500;
+                                text-transform: capitalize;
+                                color: $black;
+                                margin-bottom: 8px;
+                            }
+
+                            .authentication-input{
+                                position: relative;
+                                display: block;
+                                width: 100%;
+                                background-color: transparent;
+                                outline: none;
+                                border: 1px solid #adb5bd;
+                                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                                height: 45px;
+                                padding: 10px;
+                                font-family: $primary_font;
+                                font-size: 14px;
+                                font-weight: 500;
+                                color: $black;
+
+                                &::placeholder{
+                                    text-transform: capitalize;
+                                }
+                            }
+                        }
+
+                        .privacy-check, .remember-check{
+                            position: relative;
+                            display: block;
+                            font-family: $primary_font;
+                            font-size: 13px;
+                            font-weight: 600;
+                            text-transform: capitalize;
+                            color: $black;
+                            margin-bottom: 25px;
+
+                            .privacy-checkbox{
+                                position: relative;
+                                display: inline-block;
+                                margin-right: 4px;
+                            }
+                        }
+
+                        .form-group{
+                            position: relative;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-bottom: 25px;
+
+                            .remember-check{
+                                margin-bottom: 0;
+                            }
+
+                            .authentication-url{
+                                position: relative;
+                                font-family: $primary_font;
+                                font-size: 14px;
+                                font-weight: 700;
+                                text-transform: capitalize;
+                                color: $black;
+                            }
+                        }
+
+                        .btn-box{
+                            position: relative;
+                            width: 100%;
+
+                            .authentication-btn, .back-btn{
+                                position: relative;
+                                display: block;
+                                width: 100%;
+                                height: 45px;
+                                outline: none;
+                                background-color: $accent_color;
+                                border: 1px solid $accent_color;
+                                font-family: $primary_font;
+                                font-size: 15px;
+                                font-weight: 500;
+                                text-transform: capitalize;
+                                text-align: center;
+                                line-height: 45px;
+                                color: $white;
+                                cursor: pointer;
+
+                                &.back-btn{
+                                    background-color: $white;
+                                    border-color: #adb5bd;
+                                    color: $black;
+                                    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                                    margin-top: 20px;
+                                }
+                            }
+                        }
+
+                        .authentication-divider {
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            margin: 20px 0;
+
+                            &::before,
+                            &::after {
+                                content: '';
+                                flex: 1;
+                                border-bottom: 2px solid #CCCCCC;
+                            }
+
+                            span {
+                                font-family: $primary_font;
+                                font-size: 15px;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                color: #888888;
+                                padding: 0 10px;
+                            }
+                        }
+
+                        .btn-box{
+                            position: relative;
+                            width: 100%;
+
+                            .social-authentication-btn{
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 45px;
+                                outline: none;
+                                background-color: #F5F5F5;
+                                border: 1px solid #F5F5F5;
+                                border-radius: 5px;
+                                -webkit-border-radius: 5px;
+                                -moz-border-radius: 5px;
+                                -ms-border-radius: 5px;
+                                -o-border-radius: 5px;
+                                font-family: $primary_font;
+                                font-size: 16px;
+                                font-weight: 500;
+                                text-transform: capitalize;
+                                color: $black;
+                                cursor: pointer;
+                                
+                                .social-icon{
+                                    position: relative;
+                                    display: inline-block;
+                                    font-size: 20px;
+                                    padding-right: 12px;
+                                }
+                            }
+                        }
+
+                        .authentication-text{
+                            position: relative;
+                            font-family: $primary_font;
+                            font-size: 14px;
+                            font-weight: 500;
+                            text-transform: capitalize;
+                            color: $black;
+                            margin-top: 25px;
+
+                            .authentication-url{
+                                position: relative;
+                                display: inline-block;
+                                font-size: 15px;
+                                font-weight: 600;
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
