@@ -155,7 +155,7 @@ table {
   color: #FFFFFF;
   margin-top: 10px;
 }
-.authentication .container-fluid .authentication-content .authentication-form {
+.authentication .container-fluid .authentication-content .authentication-form, .authentication .container-fluid .authentication-content .authentication-state {
   position: relative;
   padding: 70px 70px;
   width: 100%;
@@ -163,11 +163,25 @@ table {
   place-items: center;
   background-color: #FFFFFF;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner {
+.authentication .container-fluid .authentication-content .authentication-form .inner, .authentication .container-fluid .authentication-content .authentication-state .inner {
   position: relative;
   width: 100%;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner .form-heading {
+.authentication .container-fluid .authentication-content .authentication-form .inner .img-box, .authentication .container-fluid .authentication-content .authentication-state .inner .img-box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.authentication .container-fluid .authentication-content .authentication-form .inner .img-box img, .authentication .container-fluid .authentication-content .authentication-state .inner .img-box img {
+  position: relative;
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+.authentication .container-fluid .authentication-content .authentication-form .inner .form-heading, .authentication .container-fluid .authentication-content .authentication-form .inner .text-heading, .authentication .container-fluid .authentication-content .authentication-state .inner .form-heading, .authentication .container-fluid .authentication-content .authentication-state .inner .text-heading {
   position: relative;
   display: block;
   font-family: "Huninn", sans-serif;
@@ -177,20 +191,56 @@ table {
   color: #161A2B;
   margin-bottom: 30px;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner .form-heading span {
+.authentication .container-fluid .authentication-content .authentication-form .inner .form-heading span, .authentication .container-fluid .authentication-content .authentication-form .inner .text-heading span, .authentication .container-fluid .authentication-content .authentication-state .inner .form-heading span, .authentication .container-fluid .authentication-content .authentication-state .inner .text-heading span {
   text-transform: uppercase;
   font-weight: bolder;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form {
+.authentication .container-fluid .authentication-content .authentication-form .inner .form-heading.text-heading, .authentication .container-fluid .authentication-content .authentication-form .inner .text-heading.text-heading, .authentication .container-fluid .authentication-content .authentication-state .inner .form-heading.text-heading, .authentication .container-fluid .authentication-content .authentication-state .inner .text-heading.text-heading {
+  text-align: center;
+}
+.authentication .container-fluid .authentication-content .authentication-form .inner .text-description, .authentication .container-fluid .authentication-content .authentication-state .inner .text-description {
+  position: relative;
+  display: block;
+  font-family: "Huninn", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: center;
+  color: #161A2B;
+}
+.authentication .container-fluid .authentication-content .authentication-form .inner .btn-box, .authentication .container-fluid .authentication-content .authentication-state .inner .btn-box {
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+.authentication .container-fluid .authentication-content .authentication-form .inner .btn-box .back-btn, .authentication .container-fluid .authentication-content .authentication-state .inner .btn-box .back-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 45px;
+  outline: none;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border: 1px solid #adb5bd;
+  font-family: "Huninn", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 45px;
+  color: #161A2B;
+  cursor: pointer;
+}
+.authentication .container-fluid .authentication-content .authentication-form .inner form, .authentication .container-fluid .authentication-content .authentication-state .inner form {
   position: relative;
   width: 100%;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .input-box {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .input-box, .authentication .container-fluid .authentication-content .authentication-state .inner form .input-box {
   position: relative;
   width: 100%;
   margin-bottom: 20px;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .input-box .authentication-input-label {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .input-box .authentication-input-label, .authentication .container-fluid .authentication-content .authentication-state .inner form .input-box .authentication-input-label {
   position: relative;
   display: block;
   font-family: "Huninn", sans-serif;
@@ -200,7 +250,7 @@ table {
   color: #161A2B;
   margin-bottom: 8px;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .input-box .authentication-input {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .input-box .authentication-input, .authentication .container-fluid .authentication-content .authentication-state .inner form .input-box .authentication-input {
   position: relative;
   display: block;
   width: 100%;
@@ -215,10 +265,10 @@ table {
   font-weight: 500;
   color: #161A2B;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .input-box .authentication-input::placeholder {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .input-box .authentication-input::placeholder, .authentication .container-fluid .authentication-content .authentication-state .inner form .input-box .authentication-input::placeholder {
   text-transform: capitalize;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .privacy-check, .authentication .container-fluid .authentication-content .authentication-form .inner form .remember-check {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .privacy-check, .authentication .container-fluid .authentication-content .authentication-form .inner form .remember-check, .authentication .container-fluid .authentication-content .authentication-state .inner form .privacy-check, .authentication .container-fluid .authentication-content .authentication-state .inner form .remember-check {
   position: relative;
   display: block;
   font-family: "Huninn", sans-serif;
@@ -228,12 +278,12 @@ table {
   color: #161A2B;
   margin-bottom: 25px;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .privacy-check .privacy-checkbox, .authentication .container-fluid .authentication-content .authentication-form .inner form .remember-check .privacy-checkbox {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .privacy-check .privacy-checkbox, .authentication .container-fluid .authentication-content .authentication-form .inner form .remember-check .privacy-checkbox, .authentication .container-fluid .authentication-content .authentication-state .inner form .privacy-check .privacy-checkbox, .authentication .container-fluid .authentication-content .authentication-state .inner form .remember-check .privacy-checkbox {
   position: relative;
   display: inline-block;
   margin-right: 4px;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .form-group {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .form-group, .authentication .container-fluid .authentication-content .authentication-state .inner form .form-group {
   position: relative;
   width: 100%;
   display: flex;
@@ -241,10 +291,10 @@ table {
   justify-content: space-between;
   margin-bottom: 25px;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .form-group .remember-check {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .form-group .remember-check, .authentication .container-fluid .authentication-content .authentication-state .inner form .form-group .remember-check {
   margin-bottom: 0;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .form-group .authentication-url {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .form-group .authentication-url, .authentication .container-fluid .authentication-content .authentication-state .inner form .form-group .authentication-url {
   position: relative;
   font-family: "Huninn", sans-serif;
   font-size: 14px;
@@ -252,11 +302,11 @@ table {
   text-transform: capitalize;
   color: #161A2B;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box, .authentication .container-fluid .authentication-content .authentication-state .inner form .btn-box {
   position: relative;
   width: 100%;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box .authentication-btn, .authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box .back-btn {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box .authentication-btn, .authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box .back-btn, .authentication .container-fluid .authentication-content .authentication-state .inner form .btn-box .authentication-btn, .authentication .container-fluid .authentication-content .authentication-state .inner form .btn-box .back-btn {
   position: relative;
   display: block;
   width: 100%;
@@ -273,25 +323,25 @@ table {
   color: #FFFFFF;
   cursor: pointer;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box .authentication-btn.back-btn, .authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box .back-btn.back-btn {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box .authentication-btn.back-btn, .authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box .back-btn.back-btn, .authentication .container-fluid .authentication-content .authentication-state .inner form .btn-box .authentication-btn.back-btn, .authentication .container-fluid .authentication-content .authentication-state .inner form .btn-box .back-btn.back-btn {
   background-color: #FFFFFF;
   border-color: #adb5bd;
   color: #161A2B;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   margin-top: 20px;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .authentication-divider {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .authentication-divider, .authentication .container-fluid .authentication-content .authentication-state .inner form .authentication-divider {
   display: flex;
   align-items: center;
   text-align: center;
   margin: 20px 0;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .authentication-divider::before, .authentication .container-fluid .authentication-content .authentication-form .inner form .authentication-divider::after {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .authentication-divider::before, .authentication .container-fluid .authentication-content .authentication-form .inner form .authentication-divider::after, .authentication .container-fluid .authentication-content .authentication-state .inner form .authentication-divider::before, .authentication .container-fluid .authentication-content .authentication-state .inner form .authentication-divider::after {
   content: "";
   flex: 1;
   border-bottom: 2px solid #CCCCCC;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .authentication-divider span {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .authentication-divider span, .authentication .container-fluid .authentication-content .authentication-state .inner form .authentication-divider span {
   font-family: "Huninn", sans-serif;
   font-size: 15px;
   font-weight: 700;
@@ -299,11 +349,11 @@ table {
   color: #888888;
   padding: 0 10px;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box, .authentication .container-fluid .authentication-content .authentication-state .inner form .btn-box {
   position: relative;
   width: 100%;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box .social-authentication-btn {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box .social-authentication-btn, .authentication .container-fluid .authentication-content .authentication-state .inner form .btn-box .social-authentication-btn {
   position: relative;
   display: flex;
   align-items: center;
@@ -325,13 +375,13 @@ table {
   color: #161A2B;
   cursor: pointer;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box .social-authentication-btn .social-icon {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .btn-box .social-authentication-btn .social-icon, .authentication .container-fluid .authentication-content .authentication-state .inner form .btn-box .social-authentication-btn .social-icon {
   position: relative;
   display: inline-block;
   font-size: 20px;
   padding-right: 12px;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .authentication-text {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .authentication-text, .authentication .container-fluid .authentication-content .authentication-state .inner form .authentication-text {
   position: relative;
   font-family: "Huninn", sans-serif;
   font-size: 14px;
@@ -340,7 +390,7 @@ table {
   color: #161A2B;
   margin-top: 25px;
 }
-.authentication .container-fluid .authentication-content .authentication-form .inner form .authentication-text .authentication-url {
+.authentication .container-fluid .authentication-content .authentication-form .inner form .authentication-text .authentication-url, .authentication .container-fluid .authentication-content .authentication-state .inner form .authentication-text .authentication-url {
   position: relative;
   display: inline-block;
   font-size: 15px;
