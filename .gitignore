@@ -1,10 +1,4 @@
 *.log
 
-fonts/
-icons/
-icons/fonts/
-icons/svg/
-
-
 .vscode/
 .idea/
